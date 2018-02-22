@@ -1,0 +1,49 @@
+Social Database Answers
+Austin Newman
+Write Queries 
+
+1. Find the names of all students who are friends with someone named Gabriel.
+
+    select distinct name from Highschooler where ID in (select ID1 from Friend where ID2 in (select ID from Highschooler where name="Gabriel"));
+
+
+2. Find all students who do not appear in the Likes table (as a student who likes or is liked) and return their names and grades.
+
+
+
+
+3. Find the name and grade of all students who are liked by more than one other student.
+
+
+
+
+4. For every student who likes someone 2 or more grades younger than themselves, return that student's name and grade, and the name and grade of the student they like.
+
+
+
+
+5. Find names and grades of students who only have friends in the same grade. Return the result sorted by grade, then by name within each grade. (what about students with no friends?)
+
+
+
+
+6. For each student A who likes a student B where the two are not friends, find if they have a friend C in common (who can introduce them!). For all such trios, return the name and grade of A, B, and C.
+
+
+
+
+7. Find the difference between the number of students in the school and the number of different first names.
+
+
+
+
+8. What is the average number of friends per student? (Your result should be just one number.)
+
+
+
+
+9. Find the number of students who are either friends with Cassandra or are friends of friends of Cassandra. Do not count Cassandra, even though technically she is a friend of a friend.
+
+
+
+10. Find the name and grade of the student(s) with the greatest number of friends.
